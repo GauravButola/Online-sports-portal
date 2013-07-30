@@ -1,0 +1,67 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="ContentMasterPage.master.cs" Inherits="Content_ContentMasterPage" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <style type="text/css">
+        .style34
+        {
+            width: 100%;
+            margin-left: 0;
+        }
+        .style35
+        {
+            width: 416px;
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <table class="style34">
+        <tr>
+            <td>
+                <table class="style34">
+                    <tr>
+                        <td style="text-align: right">
+                            &nbsp;</td>
+                        <td class="style35">
+                            <asp:Panel ID="Panel1" runat="server" DefaultButton="btnSearch">
+                                <table class="style34">
+                                    <tr>
+                                        <td>
+                                            <asp:DropDownList ID="ddlSearchCategory" runat="server" Height="25px" 
+                                                style="margin-left: 0" Width="152px">
+                                                <asp:ListItem>Player</asp:ListItem>
+                                                <asp:ListItem>Tournament</asp:ListItem>
+                                                <asp:ListItem Value="News">News &amp; Updates</asp:ListItem>
+                                                <asp:ListItem Value="Live">Live Match</asp:ListItem>
+                                                <asp:ListItem>Downloads</asp:ListItem>
+                                            </asp:DropDownList>
+                                        </td>
+                                        <td>
+                                            <asp:TextBox ID="txtSearch" runat="server" Height="22px" style="margin-left: 0" 
+                                                Width="338px"></asp:TextBox>
+                                        </td>
+                                        <td>
+                                            <asp:Button ID="btnSearch" runat="server" Height="28px" 
+                                                style="text-align: center" Text="Search" Width="96px" 
+                                                onclick="btnSearch_Click" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </asp:Panel>
+                        </td>
+                        <td>
+                            &nbsp;</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <table class="style34">
+        <tr>
+            <td>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+    </table>
+</asp:Content>
+

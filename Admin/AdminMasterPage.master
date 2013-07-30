@@ -1,0 +1,102 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="AdminMasterPage.master.cs" Inherits="AdminMasterPage" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <style type="text/css">
+        .style34
+        {
+            width: 100%;
+        }
+        .style35
+        {
+            width: 189px;
+        }
+        .style36
+        {
+            text-align: center;
+        }
+        .style37
+        {
+            text-align: center;
+            background-color: #E6E6E6;
+        }
+        .style38
+        {
+            background-color: #E6E6E6;
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <table class="style34">
+                </table>
+    <table class="style34">
+        <tr>
+            <td class="style35" valign="top">
+                <asp:Panel ID="pnlAdminSidebar" runat="server" 
+                    style="text-align: left" BorderStyle="Ridge" Width="186px">
+                    <asp:ImageButton ID="imgAdminHome" runat="server" 
+                        ImageUrl="~/Images/logo_admin.gif" onclick="imgAdminHome_Click" />
+                    <table class="style34">
+                    <tr>
+                        <td>
+                            <hr />
+                        </td>
+                    </tr>
+                        <tr class="style38">
+                            <td style="text-align: center; background-color: #FFFFFF">
+                                <asp:LinkButton ID="lnkUpdateUsers" runat="server" 
+                                    onclick="lnkUpdateUsers_Click">Update Users</asp:LinkButton>
+                            </td>
+                        </tr>
+                        <tr class="style38">
+                            <td class="style36">
+                                <asp:LinkButton ID="lnkUpdatePlayers" runat="server" 
+                                    onclick="lnkUpdatePlayers_Click" style="text-align: justify">Update Players</asp:LinkButton>
+                                <hr style="height: 2px" />
+                            </td>
+                        </tr>
+                    <tr>
+                        <td class="style36">
+                            <asp:LinkButton ID="lnkManageTournaments" runat="server" 
+                                onclick="lnkManageTournaments_Click">Manage Tournaments</asp:LinkButton><hr />
+                        </td>
+                    </tr>
+                    <tr style="background-color: #C0C0C0">
+                        <td class="style37">
+                            <asp:LinkButton ID="lnkUpdateMatches" runat="server" 
+                                onclick="lnkUpdateMatches_Click">Update Matches</asp:LinkButton><hr />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="style36">
+                            <asp:LinkButton ID="lnkManageNews" runat="server" onclick="lnkManageNews_Click">Manage News</asp:LinkButton><hr />
+                        </td>
+                    </tr>
+                        <tr style="background-color: #C0C0C0">
+                            <td class="style37">
+                                <asp:LinkButton ID="lnkDownloadInventory" runat="server" 
+                                    onclick="lnkDownloadInventory_Click">Update Download List</asp:LinkButton><hr />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="style36">
+                                <asp:LinkButton ID="blnMatchHistory" runat="server" 
+                                    onclick="blnMatchHistory_Click">Manage Matches History</asp:LinkButton><hr />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="style36">
+                                <asp:Image ID="Image2" runat="server" ImageUrl="~/Images/sideimage.jpg" 
+                                    Width="162px" />
+                            </td>
+                        </tr>
+                </table>
+                </asp:Panel>
+            </td>
+            <td>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+    </table>
+</asp:Content>
+

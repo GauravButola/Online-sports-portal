@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+  <Ad>
+    <ImageUrl>Images\Banners\t-twenty_banner.jpg</ImageUrl>
+    <Impressions>5</Impressions>
+  </Ad>
+  <Ad>
+    <ImageUrl>Images\Banners\sachin-banner.jpg</ImageUrl>
+    <Impressions>5</Impressions>
+  </Ad>
+  <Ad>
+    <ImageUrl>Images\Banners\cricket.jpg</ImageUrl>
+    <Impressions>5</Impressions>
+  </Ad>
+  <Ad>
+    <ImageUrl>Images\Banners\CricketBanner.jpg</ImageUrl>
+    <Impressions>5</Impressions>
+  </Ad>
+</Advertisements>

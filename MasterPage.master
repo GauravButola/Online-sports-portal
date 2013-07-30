@@ -1,0 +1,206 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        *
+        {
+            margin:0;
+            padding:0;
+            font-family:Georgia;
+            line-height:20px;
+            text-align: left;
+        }
+        a:active
+        {
+            background-color:#FF6600;
+            color:White;
+        }
+        a:hover
+        {
+            color:#00405d;
+            text-decoration:underline;
+        }
+        a
+        {
+            color: #FF6600;
+            text-decoration:none;
+        }
+        .style1
+        {
+            width: 100%;
+            height: 0px;
+        }
+        .style2
+        {
+            width: 255px;
+            height: 130px;
+            margin-left: 40px;
+        }
+        .style10
+        {
+            width: 201px;
+            height: 29px;
+            text-align: right;
+        }
+        .style11
+        {
+            height: 130px;
+        }
+        .style14
+        {
+            width: 133px;
+            background-color: #FFFFFF;
+            height: 29px;
+        }
+        .style16
+        {
+            width: 110px;
+            height: 29px;
+        }
+        .style18
+        {
+            width: 106px;
+            height: 29px;
+        }
+        .style20
+        {
+            background-color: #FFFFFF;
+            width: 71px;
+            height: 29px;
+        }
+        .style27
+        {
+            background-color: #FFFFFF;
+            width: 67px;
+            height: 29px;
+        }
+        .style29
+        {
+            background-color: #FFFFFF;
+            width: 102px;
+            height: 29px;
+        }
+        .style30
+        {
+            background-color: #FFFFFF;
+            width: 96px;
+            height: 29px;
+        }
+        .style31
+        {
+            font-size: small;
+        }
+        .style32
+        {
+            width: 1135px;
+        }
+        .style33
+        {
+            font-size: small;
+            color: #808080;
+        }
+        </style>
+</head>
+<body style="background-color: #C0C0C0; background-image: url('/CricVision/Images/seamless_patterns_12.jpg');">
+    <form id="form1" runat="server">
+    <div style="margin:auto; background-color: #FFFFFF; width: 1100px">
+        
+        <table class="style1">
+            <tr>
+                <td>
+                    <table class="style1">
+                        <tr>
+                            <td class="style2">
+                                <asp:ImageButton ID="ImageButton1" runat="server" 
+                                    ImageUrl="~/Images/logo.png" Height="116px" Width="246px" 
+                                    onclick="ImageButton1_Click" />
+                            </td>
+                            <td class="style11">
+                                <asp:AdRotator ID="AdRotator1" runat="server" 
+                                    AdvertisementFile="~/AdRotator.xml" Height="155px" Width="840px"/>
+                            </td>
+                        </tr>
+                    </table>
+                    <hr />
+                    <table style="width: 1093px">
+                        <tr>
+                            <td class="style27">
+                                <asp:LinkButton ID="lnkNavHome" runat="server" onclick="lnkHome_Click">Home</asp:LinkButton> |
+                            </td>
+                            <td class="style30">
+                                <asp:LinkButton ID="lnkNavLive" runat="server" onclick="lnkNavLive_Click">Live Match</asp:LinkButton> |
+                            </td>
+                            <td class="style29">
+                                <asp:LinkButton ID="lnkNavTournament" runat="server" 
+                                    onclick="lnkNavTournament_Click">Tournament</asp:LinkButton> |
+                            </td>
+                            <td class="style20">
+                                <asp:LinkButton ID="lnkNavPlayers" runat="server" onclick="lnkNavPlayer_Click">Players</asp:LinkButton> |
+                            </td>
+                            <td class="style14">
+                                <asp:LinkButton ID="lnkNavNews" runat="server" onclick="lnkNavNews_Click">News &amp; Updates</asp:LinkButton> |
+                            </td>
+                            <td>
+                                <asp:LinkButton ID="lnkDownloads" runat="server" onclick="lnkDownloads_Click">Downloads</asp:LinkButton>
+                            &nbsp;|</td>
+                            <td>
+                                <asp:LinkButton ID="lnkNavBookTicket" runat="server" 
+                                    onclick="lnkNavBookTicket_Click">Book Tickets</asp:LinkButton>
+                            </td>
+                            <td class="style10">
+                                <span class="style31">Welcome: </span> <asp:Label ID="lblUserName" 
+                                    runat="server" Text="Guest" CssClass="style31"></asp:Label>
+                            &nbsp;
+                            </td>
+                            <td class="style16">
+                                &nbsp;&nbsp;
+                                <asp:LinkButton ID="lnkSign" runat="server">LinkButton</asp:LinkButton>
+                            &nbsp;&nbsp; |</td>
+                            <td class="style18">
+                                <asp:LinkButton ID="lnkOutSettings" runat="server">LinkButton</asp:LinkButton>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                <hr />
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="style1">
+                        <tr>
+                            <td class="style32">
+                            <hr />
+                                <asp:LinkButton ID="lnkContactUs" runat="server" ForeColor="#00405D" 
+                                    onclick="lnkContactUs_Click">Contact Us</asp:LinkButton>
+&nbsp;|
+                                <asp:LinkButton ID="lnkAboutUs" runat="server" ForeColor="#00405D" 
+                                    onclick="lnkAboutUs_Click">About Us</asp:LinkButton>
+&nbsp;|
+                                <asp:LinkButton ID="lnkFeedback" runat="server" ForeColor="#00405D" 
+                                    onclick="lnkFeedback_Click">Feedback</asp:LinkButton>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <span class="style33">© CricVision.com | Developed by: Gaurav Butola (095061546)</span></td>
+                            <td>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        
+    </div>
+    </form>
+</body>
+</html>
